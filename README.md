@@ -1,4 +1,4 @@
-# food-delivery
+
 # Food Delivery Web Application
 
 A full-stack Food Delivery Web Application built using the MERN stack.  
