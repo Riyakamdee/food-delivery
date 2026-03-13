@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.variantsContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.variant {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 2px solid #e5e5e5;
+  border-radius: 24px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+}
+
+.variant:hover {
+  border-color: #999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.variant.active {
+  border-color: #1a1a1a;
+  background: #f8f8f8;
+  color: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.colorDot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.variant:hover .colorDot {
+  transform: scale(1.1);
+}
+
+.variant.active .colorDot {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .variantsContainer {
+    gap: 8px;
+  }
+
+  .variant {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .colorDot {
+    width: 14px;
+    height: 14px;
+  }
+}

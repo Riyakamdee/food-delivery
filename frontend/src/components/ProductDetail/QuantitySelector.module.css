@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  background: #ffffff;
+  width: fit-content;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #1a1a1a;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.button:hover:not(.disabled) {
+  background: #f8f8f8;
+  color: #1a1a1a;
+}
+
+.button:active:not(.disabled) {
+  background: #f0f0f0;
+  transform: scale(0.95);
+}
+
+.button.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  opacity: 0.5;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  width: 50px;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border: none;
+  background: #ffffff;
+  text-align: center;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .selectorContainer {
+    gap: 0;
+  }
+
+  .button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .quantity {
+    min-width: 45px;
+    font-size: 14px;
+  }
+}
